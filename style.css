@@ -5,9 +5,7 @@
 
 
 /*test*/
-.half{
-    width: 45%;
-}
+
 
 .dropContainer{
     position: relative;
@@ -39,6 +37,13 @@
     transform-origin: 0px 32px;
 }
 
+.full{
+    width:100%;
+}
+
+.half{
+    width: 45%;
+}
 
 .list li{
     text-decoration: none;
@@ -178,7 +183,6 @@ input:focus + label{
 }
 
 
-
 .input-container input {
     width: 100%;
     padding: 10px;
@@ -186,6 +190,7 @@ input:focus + label{
     margin-top: 8px;
     border:none;
     border-bottom: 1px solid #ccc;
+
 }
 
 input:hover {

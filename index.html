@@ -14,8 +14,8 @@
         <div class="question" id="question1">
             
             <div class="input-container">
-                <input type="text" id="inputField" name="inputField">
-                <label for="inputField" id="zipCode">Enter Zip Code</label>
+                <input type="text" id="zipCode" name="zipCode">
+                <label for="zipCode" >Enter Zip Code</label>
                 
             </div>
 
@@ -104,13 +104,22 @@
         </div>   
         
         <div class="question" id="question5">
-            <select id="q5">
-                <option value="" disabled selected>Select Amount of Coverage</option>
-                <option value="$5,000 - $30,000">$5,000 - $30,000</option>
-                <option value="$30,000 - $50,000">$30,000 - $50,000</option>
-                <option value="$50,000 - $500,000">$50,000 - $500,000</option>
-                <option value="$500,000+">$500,000+</option>
-            </select>
+
+            <div class="input-container">
+                <div class="dropContainer">
+                    <div><label>Select Amount of Coverage</label></div>
+                    <div class="selectedMonth"></div>
+                    <i class="fa-solid fa-caret-down"></i>
+
+                    <div class="list full" >
+                        <li>$5000 - $30,000</li>
+                        <li>$30,000 - $50,000</li>
+                        <li>$50,000 - $500,000</li>
+                        <li>$500,000 +</li>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="btn">Continue</div>
         </div>
@@ -144,8 +153,14 @@
         <div class="question" id="question8">
 
             <div class="inline">
-                <input type="text" id="fname" placeholder="First name">
-                <input type="text" id="lname" placeholder="Last name">
+                <div class="input-container">
+                    <input type="text" id="fname" name="fname">
+                    <label for="fname">First name</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="lname" name="lname">
+                    <label for="lname">Last name</label>
+                </div>
             </div>
 
             <div class="btn">Continue</div>
