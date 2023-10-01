@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="optionGenerator.js" defer></script>
+    <script src="https://kit.fontawesome.com/a255a872a2.js" crossorigin="anonymous"></script>
+    <script src="dropdown.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form action="#" id="myForm">
+        <div class="question" id="question1">
+            
+            <div class="input-container">
+                <input type="text" id="inputField" name="inputField">
+                <label for="inputField" id="zipCode">Enter Zip Code</label>
+                
+            </div>
+
+            <div class="btn">Continue</div>
+            
+        </div>
+        <div class="question" id="question2">
+            <label for="q2" class="qlabel">What is your gender?</label>
+            <div class="options" data-radio-id="q2o1">
+                <input type="radio" name="q2" value="female" id="q2o1"> 
+                Female
+            </div>
+            <div class="options" data-radio-id="q2o2">
+                <input type="radio" name="q2" value="male" id="q2o2"> 
+                Male
+            </div>
+        </div>
+
+        <div class="question" id="question3">
+            <label for="q3" class="qlabel">Have you used tobacco products within the last 12 months?</label>
+            <div class="options" data-radio-id="q3o1">
+                <input type="radio" name="q3" value="Yes" id="q3o1"> 
+                Yes
+            </div>
+            <div class="options" data-radio-id="q3o2">
+                <input type="radio" name="q3" value="No" id="q3o2"> 
+                No
+            </div>
+        </div>
+
+        <div class="question" id="question4">
+
+            <div class="inline">
+                
+                    <div class="input-container half">
+                        <div class="dropContainer">
+                            <div><label>Month</label></div>
+                            <i class="fa-solid fa-caret-down"></i>
+
+                            <div name="month" class="list" id="month">
+                                <li value="January">January</li>
+                                <li value="February">February</li>
+                                <li value="March">March</li>
+                                <li value="April">April</li>
+                                <li value="May">May</li>
+                                <li value="June">June</li>
+                                <li value="July">July</li>
+                                <li value="August">August</li>
+                                <li value="September">September</li>
+                                <li value="October">October</li>
+                                <li value="November">November</li>
+                                <li value="December">December</li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-container half">
+                        <div class="dropContainer">
+                            <div><label>Day</label></div>
+                            <i class="fa-solid fa-caret-down"></i>
+
+                            <div name="day" class="list" id="day"></div>
+                        </div>
+                    </div>
+                
+                
+                
+            </div>
+
+            <div class="input-container">
+                <div class="dropContainer">
+                    <div><label>Year</label></div>
+                    <i class="fa-solid fa-caret-down"></i>
+
+                    <div name="year" class="list" id="year"></div>
+                </div>
+            </div>
+               
+            
+
+            <div class="btn">Continue</div>
+            
+        </div>   
+        
+        <div class="question" id="question5">
+            <select id="q5">
+                <option value="" disabled selected>Select Amount of Coverage</option>
+                <option value="$5,000 - $30,000">$5,000 - $30,000</option>
+                <option value="$30,000 - $50,000">$30,000 - $50,000</option>
+                <option value="$50,000 - $500,000">$50,000 - $500,000</option>
+                <option value="$500,000+">$500,000+</option>
+            </select>
+
+            <div class="btn">Continue</div>
+        </div>
+
+        <div class="question" id="question6">
+            <label for="q6" class="qlabel">Are you planning to use a bank account?</label>
+            <div class="options" data-radio-id="q6o1">
+                <input type="radio" name="q6" value="Yes" id="q6o1"> 
+                Yes, Save with Bank Draft
+            </div>
+            <div class="options" data-radio-id="q6o2">
+                <input type="radio" name="q6" value="No" id="q6o2"> 
+                No, I only have a credit card
+            </div>
+        </div>
+
+        <div class="question" id="question7">
+            <label for="q7" class="qlabel">In the past 5 years, have you received treatment for any medical conditions?</label>
+            <div class="radioBlock" data-radio-id="q7o1">
+                <input type="radio" class="greenRadio" name="q7" value="Yes" id="q7o1"> 
+                Yes
+            </div>
+            <div class="radioBlock"  data-radio-id="q7o2">
+                <input type="radio" class="greenRadio" name="q7" value="No" id="q7o2"> 
+                No
+            </div>
+
+            <div class="btn">Continue</div>
+        </div>
+
+        <div class="question" id="question8">
+
+            <div class="inline">
+                <input type="text" id="fname" placeholder="First name">
+                <input type="text" id="lname" placeholder="Last name">
+            </div>
+
+            <div class="btn">Continue</div>
+        </div>
+
+        <div class="question" id="question9">
+            Phone number
+            <input type="text" id="number" placeholder="(201) 555-0123">
+            <div class="btn">Continue</div>
+        </div>
+
+    </form>
+
+    
+
+
+
+
+
+</body>
+</html>
