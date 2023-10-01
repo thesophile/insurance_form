@@ -25,6 +25,7 @@
 
 .list{
     opacity:0;
+    visibility:hidden;
     position:absolute;
     background-color: white;
     height: 200px;
@@ -49,6 +50,18 @@
 .list li:hover{
     background-color: rgba(0, 0, 0, 0.04);
 } 
+
+
+
+.selectedMonth {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    bottom: 5px; 
+    font-size: 14px;
+}
+
+
 
 /*test*/
 
@@ -149,7 +162,7 @@ input[type="radio"]{
     padding-bottom: 10px;
 }
 
-.input-container label {
+.input-container label,.dropContainer label{
     position: absolute;
     pointer-events: none;
     left: 10px;
@@ -163,6 +176,7 @@ input:focus + label{
     font-size: 10px; /* Shrink label font size */
 
 }
+
 
 
 .input-container input {
