@@ -226,3 +226,19 @@ input:hover {
     float: left;
     cursor: pointer;
 }
+
+.progress-container {
+    width: 100%;
+    background-color: #ccc;
+}
+
+.progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+
+    margin: 20px 0px;
+}
