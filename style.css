@@ -88,10 +88,11 @@
 .options{
     background-color: #1B6DC1;
     color:white;
+    border-radius: 5px;
     /* width:40%; */
     margin:20px auto;
     
-    padding: 8px;
+    padding: 16px 8px;
 }
 
 .options:hover{
@@ -99,7 +100,10 @@
 }
 
 .qlabel{
-    font-size: 24px;
+    font-size: 21px;
+    font-family: Muli, sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 
 
@@ -130,7 +134,8 @@ input[type="radio"]{
 .btn{
     background-color: #0E91C7;
     color: white;
-    padding: 8px;
+    border-radius: 5px;
+    padding: 16px;
     margin: 20px 0px;
 }
 
@@ -172,6 +177,7 @@ input[type="radio"]{
     top: 5px; 
     transition: top 0.3s, font-size 0.3s;
     font-size: 14px;
+    color: rgb(126, 125, 125);
 }
 
 input:focus + label{
@@ -188,6 +194,7 @@ input:focus + label{
     margin-top: 8px;
     border:none;
     border-bottom: 1px solid #ccc;
+    background-color: white;
 
 }
 
@@ -202,3 +209,11 @@ input:hover {
     border-bottom: 2px solid green;
 }
         
+#question9 label{
+    left:0px;
+    font-size: 11px;
+}
+
+#question9 input{
+    padding-top: 15px;
+}
