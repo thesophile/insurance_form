@@ -5,9 +5,7 @@
 
 
 /*test*/
-.half{
-    width: 45%;
-}
+
 
 .dropContainer{
     position: relative;
@@ -25,6 +23,7 @@
 
 .list{
     opacity:0;
+    visibility:hidden;
     position:absolute;
     background-color: white;
     height: 200px;
@@ -38,6 +37,13 @@
     transform-origin: 0px 32px;
 }
 
+.full{
+    width:100%;
+}
+
+.half{
+    width: 45%;
+}
 
 .list li{
     text-decoration: none;
@@ -49,6 +55,18 @@
 .list li:hover{
     background-color: rgba(0, 0, 0, 0.04);
 } 
+
+
+
+.selectedMonth {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    bottom: 5px; 
+    font-size: 14px;
+}
+
+
 
 /*test*/
 
@@ -70,10 +88,12 @@
 .options{
     background-color: #1B6DC1;
     color:white;
+    border-radius: 5px;
     /* width:40%; */
     margin:20px auto;
     
-    padding: 8px;
+    padding: 16px 8px;
+    cursor: pointer;
 }
 
 .options:hover{
@@ -81,16 +101,16 @@
 }
 
 .qlabel{
-    font-size: 24px;
+    font-size: 21px;
+    font-family: Muli, sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 
-/* input{
-    display: none;
-} */
 
 #question8 input{
     display: block;
-    width:45%;
+    /* width:45%; */
 }
 
 input[type="radio"]{
@@ -115,8 +135,10 @@ input[type="radio"]{
 .btn{
     background-color: #0E91C7;
     color: white;
-    padding: 8px;
+    border-radius: 5px;
+    padding: 16px;
     margin: 20px 0px;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -128,7 +150,9 @@ input[type="radio"]{
 .inline{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
+
 
 .radioBlock{
     display:flex;
@@ -141,7 +165,6 @@ input[type="radio"]{
 }
 
 
-
 /* styles.css */
 .input-container {
     position: relative;
@@ -149,13 +172,14 @@ input[type="radio"]{
     padding-bottom: 10px;
 }
 
-.input-container label {
+.input-container label,.dropContainer label{
     position: absolute;
     pointer-events: none;
     left: 10px;
     top: 5px; 
     transition: top 0.3s, font-size 0.3s;
     font-size: 14px;
+    color: rgb(126, 125, 125);
 }
 
 input:focus + label{
@@ -167,11 +191,13 @@ input:focus + label{
 
 .input-container input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0px;
     padding-bottom: 5px;
     margin-top: 8px;
     border:none;
     border-bottom: 1px solid #ccc;
+    background-color: white;
+
 }
 
 input:hover {
@@ -185,3 +211,34 @@ input:hover {
     border-bottom: 2px solid green;
 }
         
+#question9 label{
+    left:0px;
+    font-size: 11px;
+}
+
+#question9 input{
+    padding-top: 15px;
+}
+
+.back{
+    color: #838383;
+    font-size: 13px;
+    float: left;
+    cursor: pointer;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ccc;
+}
+
+.progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+
+    margin: 20px 0px;
+}

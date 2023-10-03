@@ -42,12 +42,12 @@ function next(){
     currentQuestion++;
     
     if (currentQuestion < questions.length) {
+      
       // Show the next question
       questions[currentQuestion].style.visibility = 'visible';
-
       setTimeout(function(){questions[currentQuestion].style.opacity = '1';},500);
       
-
+      progress();
     } else {
       // Form is complete
 
@@ -106,5 +106,42 @@ function next(){
 }
 
 
+function back(){
+  // Hide the current question
+  questions[currentQuestion].style.visibility = 'hidden';
+  questions[currentQuestion].style.opacity = '0';
 
+  // Move to the previous question
+  currentQuestion--;
+  
+  questions[currentQuestion].style.visibility = 'visible';
+  setTimeout(function(){questions[currentQuestion].style.opacity = '1';},500);
+    
+}
+
+const back_btns = document.querySelectorAll(".back");
+
+back_btns.forEach(function(back_btn){
+  back_btn.addEventListener('click',back);
+});
+
+
+let width=0;
+
+function progress(){
+
+  // find interval
+  const questionDivs = document.querySelectorAll("div.question");
+  const numberOfQuestions = questionDivs.length;
+  var interval = 100/numberOfQuestions;
+
+  width+=interval;
+  
+  let progressBars = document.querySelectorAll('.progress-bar');
+
+  progressBars.forEach(function(progressBar){
+      progressBar.style.width = width + "%";
+  });
+
+}
 
