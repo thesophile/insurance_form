@@ -93,6 +93,7 @@
     margin:20px auto;
     
     padding: 16px 8px;
+    cursor: pointer;
 }
 
 .options:hover{
@@ -137,6 +138,7 @@ input[type="radio"]{
     border-radius: 5px;
     padding: 16px;
     margin: 20px 0px;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -216,4 +218,11 @@ input:hover {
 
 #question9 input{
     padding-top: 15px;
+}
+
+.back{
+    color: #838383;
+    font-size: 13px;
+    float: left;
+    cursor: pointer;
 }
