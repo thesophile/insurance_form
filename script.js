@@ -44,10 +44,8 @@ function next(){
     if (currentQuestion < questions.length) {
       // Show the next question
       questions[currentQuestion].style.visibility = 'visible';
-
       setTimeout(function(){questions[currentQuestion].style.opacity = '1';},500);
       
-
     } else {
       // Form is complete
 
@@ -106,5 +104,21 @@ function next(){
 }
 
 
+function back(){
+  // Hide the current question
+  questions[currentQuestion].style.visibility = 'hidden';
+  questions[currentQuestion].style.opacity = '0';
 
+  // Move to the previous question
+  currentQuestion--;
+  
+  questions[currentQuestion].style.visibility = 'visible';
+  setTimeout(function(){questions[currentQuestion].style.opacity = '1';},500);
+    
+}
 
+const back_btns = document.querySelectorAll(".back");
+
+back_btns.forEach(function(back_btn){
+  back_btn.addEventListener('click',back);
+});
