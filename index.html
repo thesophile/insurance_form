@@ -12,21 +12,18 @@
 <body>
     <form action="#" id="myForm">
         <div class="question" id="question1">
-  
-            <div class="qlabel">What’s your zip code?</div>
-
+            
             <div class="input-container">
-                <input type="text" id="zipCode" name="zipCode">
-                <label for="zipCode" >Enter Zip Code</label>
+                <input type="text" id="inputField" name="inputField">
+                <label for="inputField" id="zipCode">Enter Zip Code</label>
                 
             </div>
 
-            <div class="btn">CONTINUE</div>
+            <div class="btn">Continue</div>
+            
         </div>
-
-
         <div class="question" id="question2">
-            <label for="q2" class="qlabel">What is your Gender</label>
+            <label for="q2" class="qlabel">What is your gender?</label>
             <div class="options" data-radio-id="q2o1">
                 <input type="radio" name="q2" value="female" id="q2o1"> 
                 Female
@@ -35,13 +32,7 @@
                 <input type="radio" name="q2" value="male" id="q2o2"> 
                 Male
             </div>
-
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
         </div>
-
 
         <div class="question" id="question3">
             <label for="q3" class="qlabel">Have you used tobacco products within the last 12 months?</label>
@@ -53,25 +44,15 @@
                 <input type="radio" name="q3" value="No" id="q3o2"> 
                 No
             </div>
-
-            
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
         </div>
 
-
         <div class="question" id="question4">
-
-            <div class="qlabel">What is your date of birth?</div>
 
             <div class="inline">
                 
                     <div class="input-container half">
                         <div class="dropContainer">
                             <div><label>Month</label></div>
-                            <div class="selectedMonth"></div>
                             <i class="fa-solid fa-caret-down"></i>
 
                             <div name="month" class="list" id="month">
@@ -94,7 +75,6 @@
                     <div class="input-container half">
                         <div class="dropContainer">
                             <div><label>Day</label></div>
-                            <div class="selectedMonth"></div>
                             <i class="fa-solid fa-caret-down"></i>
 
                             <div name="day" class="list" id="day"></div>
@@ -108,7 +88,6 @@
             <div class="input-container">
                 <div class="dropContainer">
                     <div><label>Year</label></div>
-                    <div class="selectedMonth"></div>
                     <i class="fa-solid fa-caret-down"></i>
 
                     <div name="year" class="list" id="year"></div>
@@ -117,43 +96,21 @@
                
             
 
-            <div class="btn">CONTINUE</div>
+            <div class="btn">Continue</div>
             
-            
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
         </div>   
         
-
         <div class="question" id="question5">
+            <select id="q5">
+                <option value="" disabled selected>Select Amount of Coverage</option>
+                <option value="$5,000 - $30,000">$5,000 - $30,000</option>
+                <option value="$30,000 - $50,000">$30,000 - $50,000</option>
+                <option value="$50,000 - $500,000">$50,000 - $500,000</option>
+                <option value="$500,000+">$500,000+</option>
+            </select>
 
-            <div class="input-container">
-                <div class="dropContainer">
-                    <div><label>Select Amount of Coverage</label></div>
-                    <div class="selectedMonth"></div>
-                    <i class="fa-solid fa-caret-down"></i>
-
-                    <div class="list full" >
-                        <li>$5000 - $30,000</li>
-                        <li>$30,000 - $50,000</li>
-                        <li>$50,000 - $500,000</li>
-                        <li>$500,000 +</li>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="btn">CONTINUE</div>
-
-            
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
+            <div class="btn">Continue</div>
         </div>
-
 
         <div class="question" id="question6">
             <label for="q6" class="qlabel">Are you planning to use a bank account?</label>
@@ -165,14 +122,7 @@
                 <input type="radio" name="q6" value="No" id="q6o2"> 
                 No, I only have a credit card
             </div>
-
-            
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
         </div>
-
 
         <div class="question" id="question7">
             <label for="q7" class="qlabel">In the past 5 years, have you received treatment for any medical conditions?</label>
@@ -185,55 +135,24 @@
                 No
             </div>
 
-            <div class="btn">CONTINUE</div>
-
-            
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
+            <div class="btn">Continue</div>
         </div>
-
 
         <div class="question" id="question8">
 
             <div class="inline">
-                <div class="input-container half">
-                    <input type="text" id="fname" name="fname">
-                    <label for="fname">First name</label>
-                </div>
-                <div class="input-container half">
-                    <input type="text" id="lname" name="lname">
-                    <label for="lname">Last name</label>
-                </div>
+                <input type="text" id="fname" placeholder="First name">
+                <input type="text" id="lname" placeholder="Last name">
             </div>
 
-            <div class="btn">CONTINUE</div>
-
-            
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
+            <div class="btn">Continue</div>
         </div>
-
 
         <div class="question" id="question9">
-            
-            <div class="input-container">
-                <label for="number">Best Phone Number</label>
-                <input type="text" id="number" placeholder="(201) 555-0123">
-                
-            </div>
-            
-            <div class="btn">CONTINUE</div>
-
-            <div class="progress-container">
-                <div class="progress-bar" ></div>
-            </div>
-            <div class="back">←Back</div>
+            Phone number
+            <input type="text" id="number" placeholder="(201) 555-0123">
+            <div class="btn">Continue</div>
         </div>
-
 
     </form>
 

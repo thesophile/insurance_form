@@ -1,51 +1,59 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+
     <style>
-.progress-container {
-    width: 100%;
-    background-color: #ccc;
-}
+        .question{
+            visibility: visible;
+            opacity: 1;
+        }
 
-.progress-bar {
-    width: 0;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-}
-
+        .list{
+            opacity: 1;
+        }
     </style>
+        <script src="script.js" defer></script>
+        <script src="dropdown.js" defer></script>
+
+    <title>Minimal Test</title>
 </head>
 <body>
-    <div class="progress-container">
-        <div class="progress-bar" id="myProgressBar"></div>
-    </div>
-    <button onclick="startProgress()">Start Progress</button>
+    
+    <div class="question" id="question4">
 
+        <div class="inline">
+            
+                <div class="input-container half">
+                    <div class="dropContainer">
+                        <div class="list">
+                            <li>iicejmc</li>
+                            <li>cmkdmck</li>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+   
 
     <script>
-        function startProgress() {
-    let progressBar = document.getElementById("myProgressBar");
-    let width = 0;
-    let interval = setInterval(frame, 10);
 
-    function frame() {
-        if (width >= 100) {
-            clearInterval(interval);
-        } else {
-            width++;
-            progressBar.style.width = width + "%";
-            progressBar.innerHTML = width + "%";
-        }
-    }
-}
+
+// const dropContainers = document.querySelectorAll('.dropContainer');
+
+
+
+// dropContainers.forEach(dropContainer => {
+// //   console.log('function started');
+
+//   dropContainer.style.color="red";
+
+// });
+
 
     </script>
 </body>
