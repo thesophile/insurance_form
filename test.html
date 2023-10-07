@@ -1,60 +1,42 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        .question{
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .list{
-            opacity: 1;
-        }
-    </style>
-        <script src="script.js" defer></script>
-        <script src="dropdown.js" defer></script>
+ 
 
     <title>Minimal Test</title>
 </head>
 <body>
-    
-    <div class="question" id="question4">
+    <label for="numberInput">Enter 6 numbers:</label>
+<input type="number" id="numberInput" name="numberInput"  min="0" max="999999">
+<div id="error-message" style="color: red;"></div>
+<div onclick="next(this.id)" id="numbers">Continue</div>
+<script>
 
-        <div class="inline">
-            
-                <div class="input-container half">
-                    <div class="dropContainer">
-                        <div class="list">
-                            <li>iicejmc</li>
-                            <li>cmkdmck</li>
-                        </div>
-                    </div>
+function next(id) {
 
-                </div>
-        </div>
-    </div>
+        //checks if valid
+        if(inputValue.length !== 6 || isNaN(inputValue)){
+        isValid(numbers) = false;
+        }
+        else{
+            isValid(numbers) = true;
+        }
 
-   
+  if (isValid(id)) {
+    document.getElementById("error-message").textContent = "valid:true";
+  } else {
+    document.getElementById("error-message").textContent = "valid:false";
+  }
+}
 
-    <script>
-
-
-// const dropContainers = document.querySelectorAll('.dropContainer');
-
-
-
-// dropContainers.forEach(dropContainer => {
-// //   console.log('function started');
-
-//   dropContainer.style.color="red";
-
-// });
+const inputValue = document.getElementById('numberInput').value;
 
 
-    </script>
+</script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 const options = document.querySelectorAll('.options');
 const buttons = document.querySelectorAll('.btn'); // Get all "continue" buttons
 const questions = document.querySelectorAll('.question');
+const back_btns = document.querySelectorAll(".back");
 
 let currentQuestion = 0;
 
@@ -10,9 +11,9 @@ questions[currentQuestion].style.visibility = 'visible';
 questions[currentQuestion].style.opacity = '1';
 
 // When any continue button is clicked, next question is shown.
-buttons.forEach(function(button) {
-  button.addEventListener('click',next )
-});
+// buttons.forEach(function(button) {
+//   button.addEventListener('click',validate )
+// });
 
 // Checks the radio when the associated option is clicked
 options.forEach((option) => {
@@ -22,6 +23,11 @@ options.forEach((option) => {
 //proceeds to next question when an option is selected 
 options.forEach((option) => {
   option.addEventListener('click', () => next());
+});
+
+// back button
+back_btns.forEach(function(back_btn){
+  back_btn.addEventListener('click',back);
 });
 
 function radioCheck(option){
@@ -119,11 +125,7 @@ function back(){
     
 }
 
-const back_btns = document.querySelectorAll(".back");
 
-back_btns.forEach(function(back_btn){
-  back_btn.addEventListener('click',back);
-});
 
 
 let width=0;
@@ -143,5 +145,37 @@ function progress(){
       progressBar.style.width = width + "%";
   });
 
+}
+
+function validate1(){
+  const zipcode = document.getElementById('zipCode').value;
+
+  if(zipcode.length !== 6 || isNaN(zipcode)){
+      document.getElementById("error-message1").textContent = "invalid zipcode. please enter 6 digits";
+    }
+    else{
+      document.getElementById("error-message1").textContent = "";
+      next();
+    }
+}
+
+function validate4(){
+  next();   
+}
+
+function validate5(){
+  next();   
+}
+
+function validate7(){
+  next();   
+}
+
+function validate8(){
+  next();   
+}
+
+function validate9(){
+  next();   
 }
 
