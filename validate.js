@@ -54,7 +54,7 @@ function validate1(){
         document.getElementById("error-message4").textContent = "";
         next();
     } else {
-        document.getElementById("error-message4").textContent = "This field is required";
+        document.getElementById("error-message4").textContent = "Please select at least 1 option";
     }
     
   }

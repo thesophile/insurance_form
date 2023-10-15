@@ -183,12 +183,41 @@
         <div class="question" id="question7">
             <label for="treatment" class="qlabel">In the past 5 years, have you received treatment for any medical conditions?</label>
             <div class="radioBlock" data-radio-id="q7o1">
-                <input type="radio" class="greenRadio" name="treatment" value="Yes" id="q7o1"> 
+                <input type="radio" class="greenRadio" name="treatment" value="Yes" id="treatment_yes"> 
                 Yes
             </div>
             <div class="radioBlock"  data-radio-id="q7o2">
                 <input type="radio" class="greenRadio" name="treatment" value="No" id="q7o2"> 
                 No
+            </div>
+
+            <div class="checkDiv">
+
+                <div class="checkLabel">Have you ever been treated for and/or taken medication for any of the following?</div>
+
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="cancer" id="cancer">
+                <label for="cancer">Internal Cancer (last 5 years)</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">Anxiety / Depression / Bipolar</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">Diabetes</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">Heart attack</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">High Blood Pressure</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">CHF</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">Coronary Artery Disease</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">Sleep Apnea</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">Stroke</label><br>
+                <input type="checkbox" class="checkboxes" name="treatment_kind" value="depression" id="depression">
+                <label for="depression">Other</label><br>
+
+                
+
             </div>
 
             <div id="error-message4" class="error-message"></div>
@@ -206,11 +235,11 @@
         <div class="question" id="question8">
 
             <div class="inline">
-                <div class="input-container half">
+                <div class="input-container text-container half">
                     <input type="text" id="fname" name="fname">
                     <label for="fname">First name</label>
                 </div>
-                <div class="input-container half">
+                <div class="input-container text-container half">
                     <input type="text" id="lname" name="lname">
                     <label for="lname">Last name</label>
                 </div>

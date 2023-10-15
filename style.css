@@ -99,10 +99,6 @@ input[type="radio"]{
     color: rgb(126, 125, 125);
 }
 
-/* input:focus + label{
-    top: 0px; /* Move label up */
-    /* font-size: 10px; */
-
 
 
 .input-container input {
@@ -176,6 +172,19 @@ input:hover {
     background-color: rgba(0, 0, 0, 0.04);
 } 
 
+.checkDiv{
+    display: none;
+    text-align: left;
+}
+
+.checkLabel{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.checkboxes{
+    margin-bottom: 15px;
+}
 
 
 .btn{
@@ -239,7 +248,6 @@ input:hover {
 
 #question8 input{
     display: block;
-    /* width:45%; */
 }
 
 #question9 label{ /*Phone number*/
