@@ -166,15 +166,16 @@ function inverse_progress(){
 
 }
 
-const treatment_radios = document.querySelectorAll('input[name="treatment"]');
 
+//For hiding and displaying treatment checkboxes depending on whether the yes option radio is checked
+
+const treatment_radios = document.querySelectorAll('input[name="treatment"]');
 
 for(const radio of treatment_radios){
   radio.addEventListener("change", function() {
-    console.log('treatment value changed');
     const checkDiv = document.querySelectorAll('.checkDiv')[0];
     const treatment_yes = document.querySelector('input[id="treatment_yes"]');
-    
+
       if (treatment_yes.checked) {
         checkDiv.style.display="block";
       } else {
