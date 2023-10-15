@@ -166,35 +166,5 @@ function inverse_progress(){
 
 }
 
-function validate1(){
-  const zipcode = document.getElementById('zipCode').value;
 
-  if(zipcode.length !== 6 || isNaN(zipcode)){
-      document.getElementById("error-message1").textContent = "invalid zipcode. please enter 6 digits(only numbers)";
-    }
-    else{
-      document.getElementById("error-message1").textContent = "";
-      next();
-    }
-}
-
-function validate4(){
-  next();   
-}
-
-function validate5(){
-  next();   
-}
-
-function validate7(){
-  next();   
-}
-
-function validate8(){
-  next();   
-}
-
-function validate9(){
-  next();   
-}
 
