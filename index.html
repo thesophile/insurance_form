@@ -27,13 +27,13 @@
 
 
         <div class="question" id="question2">
-            <label for="q2" class="qlabel">What is your Gender</label>
+            <label for="gender" class="qlabel">What is your Gender</label>
             <div class="options" data-radio-id="q2o1">
-                <input type="radio" name="q2" value="female" id="q2o1"> 
+                <input type="radio" name="gender" value="female" id="q2o1"> 
                 Female
             </div>
             <div class="options" data-radio-id="q2o2">
-                <input type="radio" name="q2" value="male" id="q2o2"> 
+                <input type="radio" name="gender" value="male" id="q2o2"> 
                 Male
             </div>
 
@@ -45,13 +45,13 @@
 
 
         <div class="question" id="question3">
-            <label for="q3" class="qlabel">Have you used tobacco products within the last 12 months?</label>
+            <label for="tobacco" class="qlabel">Have you used tobacco products within the last 12 months?</label>
             <div class="options" data-radio-id="q3o1">
-                <input type="radio" name="q3" value="Yes" id="q3o1"> 
+                <input type="radio" name="tobacco" value="Yes" id="q3o1"> 
                 Yes
             </div>
             <div class="options" data-radio-id="q3o2">
-                <input type="radio" name="q3" value="No" id="q3o2"> 
+                <input type="radio" name="tobacco" value="No" id="q3o2"> 
                 No
             </div>
 
@@ -72,7 +72,7 @@
                     <div class="input-container half">
                         <div class="dropContainer">
                             <div><label>Month</label></div>
-                            <div class="selectedMonth"></div>
+                            <div class="selectedMonth" id="month_selected"></div>
                             <i class="fa-solid fa-caret-down"></i>
 
                             <div name="month" class="list" id="month">
@@ -95,7 +95,7 @@
                     <div class="input-container half">
                         <div class="dropContainer">
                             <div><label>Day</label></div>
-                            <div class="selectedMonth"></div>
+                            <div class="selectedMonth" id="day_selected"></div>
                             <i class="fa-solid fa-caret-down"></i>
 
                             <div name="day" class="list" id="day"></div>
@@ -109,7 +109,7 @@
             <div class="input-container">
                 <div class="dropContainer">
                     <div><label>Year</label></div>
-                    <div class="selectedMonth"></div>
+                    <div class="selectedMonth" id="year_selected"></div>
                     <i class="fa-solid fa-caret-down"></i>
 
                     <div name="year" class="list" id="year"></div>
@@ -133,7 +133,7 @@
             <div class="input-container">
                 <div class="dropContainer">
                     <div><label>Select Amount of Coverage</label></div>
-                    <div class="selectedMonth"></div>
+                    <div class="selectedMonth" id="coverage_selected"></div>
                     <i class="fa-solid fa-caret-down"></i>
 
                     <div class="list full" >
@@ -157,13 +157,13 @@
 
 
         <div class="question" id="question6">
-            <label for="q6" class="qlabel">Are you planning to use a bank account?</label>
+            <label for="account" class="qlabel">Are you planning to use a bank account?</label>
             <div class="options" data-radio-id="q6o1">
-                <input type="radio" name="q6" value="Yes" id="q6o1"> 
+                <input type="radio" name="account" value="Yes" id="q6o1"> 
                 Yes, Save with Bank Draft
             </div>
             <div class="options" data-radio-id="q6o2">
-                <input type="radio" name="q6" value="No" id="q6o2"> 
+                <input type="radio" name="account" value="No" id="q6o2"> 
                 No, I only have a credit card
             </div>
 
@@ -176,13 +176,13 @@
 
 
         <div class="question" id="question7">
-            <label for="q7" class="qlabel">In the past 5 years, have you received treatment for any medical conditions?</label>
+            <label for="treatment" class="qlabel">In the past 5 years, have you received treatment for any medical conditions?</label>
             <div class="radioBlock" data-radio-id="q7o1">
-                <input type="radio" class="greenRadio" name="q7" value="Yes" id="q7o1"> 
+                <input type="radio" class="greenRadio" name="treatment" value="Yes" id="q7o1"> 
                 Yes
             </div>
             <div class="radioBlock"  data-radio-id="q7o2">
-                <input type="radio" class="greenRadio" name="q7" value="No" id="q7o2"> 
+                <input type="radio" class="greenRadio" name="treatment" value="No" id="q7o2"> 
                 No
             </div>
 

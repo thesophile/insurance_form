@@ -3,42 +3,11 @@
     border:none;
 }
 
-
-.error-message{
-    color: green;
-    text-align: left;
-    margin-top: 10px;
-}
-
-
-.dropContainer{
-    position: relative;
+/*Layout*/
+.inline{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
-
-
-.fa-caret-down{
-    color: #ccc;
-}
-
-.list{
-    opacity:0;
-    visibility:hidden;
-    position:absolute;
-    background-color: white;
-    height: 200px;
-    overflow:scroll;
-    width:250px;
-    z-index: 2;
-    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12);
-
-    transform: none;
-    transition: opacity 289ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 192ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    transform-origin: 0px 32px;
 }
 
 .full{
@@ -49,28 +18,12 @@
     width: 45%;
 }
 
-.list li{
-    text-decoration: none;
-    list-style: none;
-    text-align: left;
-    padding:10px;
-} 
-
-.list li:hover{
-    background-color: rgba(0, 0, 0, 0.04);
-} 
 
 
 
-.selectedMonth {
-    position: absolute;
-    pointer-events: none;
-    left: 10px;
-    bottom: 5px; 
-    font-size: 14px;
-}
 
 
+/*Class Elements*/
 
 .question {
     visibility: hidden;
@@ -85,6 +38,19 @@
     top:0;
     left:50%;
     transform:translate(-50%,0);
+}
+
+.qlabel{
+    font-size: 21px;
+    font-family: Muli, sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.error-message{
+    color: green;
+    text-align: left;
+    margin-top: 10px;
 }
 
 .options{
@@ -102,58 +68,11 @@
     background-color: #1d77d4;
 }
 
-.qlabel{
-    font-size: 21px;
-    font-family: Muli, sans-serif;
-    font-weight: bold;
-    margin-bottom: 50px;
-}
-
-
-#question8 input{
-    display: block;
-    /* width:45%; */
-}
 
 input[type="radio"]{
     display: none;
 }
 
-#question7 input[type="radio"]{
-    display: block;
-}
-
-
-#question4 label{
-    font-size: 16px;
-    color: grey;
-}
-
-#question4 select{
-    border-bottom: 1px solid #ccc; /* Add a bottom border */
-    padding: 8px;
-}
-
-.btn{
-    background-color: #0E91C7;
-    color: white;
-    border-radius: 5px;
-    padding: 16px;
-    margin: 20px 0px;
-    cursor: pointer;
-}
-
-.btn:hover{
-    opacity: 0.9;
-    background-color: rgb(14, 145, 199);
-}
-
-
-.inline{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
 
 
 .radioBlock{
@@ -162,16 +81,12 @@ input[type="radio"]{
     margin:20px 0px;
 }
 
-#question7 input[type="radio"]{
-    accent-color: green;
-}
 
-
-/* styles.css */
 .input-container {
     position: relative;
     margin-bottom: 40px;
     padding-bottom: 10px;
+    background-color: white;
 }
 
 .input-container label,.dropContainer label{
@@ -198,7 +113,6 @@ input[type="radio"]{
     border:none;
     border-bottom: 1px solid #ccc;
     background-color: white;
-
 }
 
 input:hover {
@@ -212,22 +126,74 @@ input:hover {
     border-bottom: 2px solid green;
     background-color: white;
 }
-        
-#question9 label{
-    left:0px;
-    font-size: 11px;
+
+.dropContainer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
 }
 
-#question9 input{
-    padding-top: 15px;
+
+.fa-caret-down{
+    color: #ccc;
 }
 
-.back{
-    color: #838383;
-    font-size: 13px;
-    float: left;
+.selectedMonth {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    bottom: 5px; 
+    font-size: 14px;
+}
+
+.list{
+    opacity:0;
+    visibility:hidden;
+    position:absolute;
+    background-color: white;
+    height: 200px;
+    overflow:scroll;
+    width:250px;
+    z-index: 2;
+    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12);
+    transform: none;
+    transition: opacity 289ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 192ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transform-origin: 0px 32px;
+}
+
+
+.list li{
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+    padding:10px;
+} 
+
+.list li:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+} 
+
+
+
+.btn{
+    background-color: #0E91C7;
+    color: white;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 20px 0px;
     cursor: pointer;
 }
+
+.btn:hover{
+    opacity: 0.9;
+    background-color: rgb(14, 145, 199);
+}
+        
+
+
 
 .progress-container {
     width: 100%;
@@ -241,9 +207,51 @@ input:hover {
     text-align: center;
     line-height: 30px;
     color: white;
-
     margin: 20px 0px;
 }
+
+.back{
+    color: #838383;
+    font-size: 13px;
+    float: left;
+    cursor: pointer;
+}
+
+/*###################*/
+
+
+
+/*Id elements*/
+#question4 label{
+    font-size: 16px;
+    color: grey;
+}
+
+#question4 select{
+    border-bottom: 1px solid #ccc; /* Add a bottom border */
+    padding: 8px;
+}
+
+#question7 input[type="radio"]{
+    display: block;
+    accent-color: green;
+}
+
+#question8 input{
+    display: block;
+    /* width:45%; */
+}
+
+#question9 label{ /*Phone number*/
+    left:0px;
+    font-size: 11px;
+}
+
+#question9 input{
+    padding-top: 15px;
+}
+
+
 
 
 /*Hide input arrows*/
@@ -253,7 +261,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;

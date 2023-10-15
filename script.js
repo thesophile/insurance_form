@@ -58,15 +58,15 @@ function next(){
       // Form is complete
 
       // Get selected answers
-      const insurance = document.querySelector('#zipCode').value;
-      const gender = document.querySelector('input[name="q2"]:checked').value;
-      const tobacco = document.querySelector('input[name="q3"]:checked').value;
-      const month = document.getElementById('month').value;
-      const day = document.getElementById('day').value;
-      const year = document.getElementById('year').value;
-      const coverage = document.getElementById('q5').value;
-      const account = document.querySelector('input[name="q6"]:checked').value;
-      const treatment = document.querySelector('input[name="q7"]:checked').value;
+      const zipcode = document.querySelector('#zipCode').value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const tobacco = document.querySelector('input[name="tobacco"]:checked').value;
+      const month = document.getElementById('month_selected').textContent;
+      const day = document.getElementById('day_selected').textContent;
+      const year = document.getElementById('year_selected').textContent;
+      const coverage = document.getElementById('coverage_selected').textContent;
+      const account = document.querySelector('input[name="account"]:checked').value;
+      const treatment = document.querySelector('input[name="treatment"]:checked').value;
       const fname = document.getElementById('fname').value;
       const lname = document.getElementById('lname').value;
       const number = document.getElementById('number').value;
@@ -76,7 +76,7 @@ function next(){
 
       // Create a JSON object with the answers
       const formData = {
-        "insurance": insurance,
+        "zipcode": zipcode,
         "gender": gender,
         "tobacco": tobacco,
         "month": month,
@@ -106,7 +106,7 @@ function next(){
     });
 
     //redirect to thank you page
-    window.location.href = 'https://fastlifeins.com/thank-you' ;
+    //window.location.href = 'https://fastlifeins.com/thank-you' ;
 
     }
 }
@@ -122,6 +122,8 @@ function back(){
   
   questions[currentQuestion].style.visibility = 'visible';
   setTimeout(function(){questions[currentQuestion].style.opacity = '1';},500);
+
+  inverse_progress();
     
 }
 
@@ -147,11 +149,28 @@ function progress(){
 
 }
 
+function inverse_progress(){
+
+  // find interval
+  const questionDivs = document.querySelectorAll("div.question");
+  const numberOfQuestions = questionDivs.length;
+  var interval = 100/numberOfQuestions;
+
+  width-=interval;
+  
+  let progressBars = document.querySelectorAll('.progress-bar');
+
+  progressBars.forEach(function(progressBar){
+      progressBar.style.width = width + "%";
+  });
+
+}
+
 function validate1(){
   const zipcode = document.getElementById('zipCode').value;
 
   if(zipcode.length !== 6 || isNaN(zipcode)){
-      document.getElementById("error-message1").textContent = "invalid zipcode. please enter 6 digits";
+      document.getElementById("error-message1").textContent = "invalid zipcode. please enter 6 digits(only numbers)";
     }
     else{
       document.getElementById("error-message1").textContent = "";
