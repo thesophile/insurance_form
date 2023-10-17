@@ -71,6 +71,17 @@ function next(){
       const lname = document.getElementById('lname').value;
       const number = document.getElementById('number').value;
 
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+      //list the checked values for treatment
+      const checkedValues = [];
+
+      checkboxes.forEach(function(checkbox) {
+          if (checkbox.checked) {
+              checkedValues.push(checkbox.value);
+          }
+      });
+
 
       
 
@@ -85,6 +96,7 @@ function next(){
         "coverage": coverage,
         "account": account,
         "treatment": treatment,
+        "treatment_for":checkedValues,
         "fname": fname,
         "lname": lname,
         "number": number,
@@ -180,6 +192,12 @@ for(const radio of treatment_radios){
         checkDiv.style.display="block";
       } else {
         checkDiv.style.display="none";
+        
+        // Clear all check boxes
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = false;
+        });
       }
   });
 }
