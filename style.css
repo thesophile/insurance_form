@@ -196,6 +196,10 @@ input:hover {
     margin-bottom: 15px;
 }
 
+.comments{
+    font-size: 12px;
+    text-align: left;
+}
 
 .btn{
     background-color: #0E91C7;
@@ -268,6 +272,7 @@ input:hover {
 #question9 input{
     padding-top: 15px;
 }
+
 
 
 
