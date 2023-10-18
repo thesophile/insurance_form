@@ -82,7 +82,7 @@ function next(){
           }
       });
 
-
+      const otherTreatments = document.querySelector('#otherTreatments').value;
       
 
       // Create a JSON object with the answers
@@ -97,6 +97,7 @@ function next(){
         "account": account,
         "treatment": treatment,
         "treatment_for":checkedValues,
+        "otherTreatments":otherTreatments,
         "fname": fname,
         "lname": lname,
         "number": number,
@@ -203,3 +204,13 @@ for(const radio of treatment_radios){
 }
 
 
+const otherBox = document.querySelector('input[id="other"]');
+const otherDiv = document.querySelector('.otherDiv');
+
+otherBox.addEventListener('change',function(){
+  if (otherBox.checked) {
+    otherDiv.style.display="block";
+  } else {
+    otherDiv.style.display="none";
+  }
+});

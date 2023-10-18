@@ -29,7 +29,8 @@
     height: 100vh;
     width: 100vw;
     cursor: default;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-x: scroll;
 }
 
 /*Class Elements*/
@@ -199,6 +200,10 @@ input:hover {
 .comments{
     font-size: 12px;
     text-align: left;
+}
+
+.otherDiv{
+    display:none;
 }
 
 .btn{
