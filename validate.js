@@ -78,8 +78,8 @@ function validate1(){
     const number = document.getElementById('number').value;
 
 
-    if(number==""){
-        document.getElementById("error-message6").textContent = "This field is required";
+    if(number.length !==10 || isNaN(number)){
+        document.getElementById("error-message6").textContent = "Enter 10 digit phone number";
       }
       else{
         document.getElementById("error-message6").textContent = "";
