@@ -79,7 +79,7 @@ function validate1(){
 
 
     if(number.length !==10 || isNaN(number)){
-        document.getElementById("error-message6").textContent = "Enter 10 digit phone number";
+        document.getElementById("error-message6").textContent = "Please enter a valid US number";
       }
       else{
         document.getElementById("error-message6").textContent = "";
