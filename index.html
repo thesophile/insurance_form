@@ -74,7 +74,7 @@
             <div class="inline">
                 
                     <div class="input-container half">
-                        <div class="dropContainer">
+                        <div class="dropContainer" id="month_container">
                             <div><label>Month</label></div>
                             <div class="selectedMonth" id="month_selected"></div>
                             <i class="fa-solid fa-caret-down"></i>
@@ -94,16 +94,22 @@
                                 <li value="December">December</li>
                             </div>
                         </div>
+
+                        <div id="error-message2_month" class="error-message"></div>
                     </div>
 
+
+
                     <div class="input-container half">
-                        <div class="dropContainer">
+                        <div class="dropContainer" id="day_container">
                             <div><label>Day</label></div>
                             <div class="selectedMonth" id="day_selected"></div>
                             <i class="fa-solid fa-caret-down"></i>
 
                             <div name="day" class="list" id="day"></div>
                         </div>
+
+                        <div id="error-message2_day" class="error-message"></div>
                     </div>
                 
                 
@@ -111,13 +117,15 @@
             </div>
 
             <div class="input-container">
-                <div class="dropContainer">
+                <div class="dropContainer" id="year_container">
                     <div><label>Year</label></div>
                     <div class="selectedMonth" id="year_selected"></div>
                     <i class="fa-solid fa-caret-down"></i>
 
                     <div name="year" class="list" id="year"></div>
                 </div>
+
+                <div id="error-message2_year" class="error-message"></div>
             </div>
 
             <div class="comments">Must be between 18 - 85 to submit a request</div>
@@ -137,7 +145,7 @@
         <div class="question" id="question5">
 
             <div class="input-container">
-                <div class="dropContainer">
+                <div class="dropContainer" id="coverage_container">
                     <div><label>Select Amount of Coverage</label></div>
                     <div class="selectedMonth" id="coverage_selected"></div>
                     <i class="fa-solid fa-caret-down"></i>
@@ -254,14 +262,17 @@
                 <div class="input-container text-container half">
                     <input type="text" id="fname" name="fname">
                     <label for="fname">First name</label>
+
+                    <div id="error-message_fname" class="error-message"></div>
                 </div>
                 <div class="input-container text-container half">
                     <input type="text" id="lname" name="lname">
                     <label for="lname">Last name</label>
+
+                    <div id="error-message_lname" class="error-message"></div>
                 </div>
             </div>
 
-            <div id="error-message5" class="error-message"></div> 
 
             <div class="btn" onclick="validate8()">CONTINUE</div>
 
@@ -283,10 +294,10 @@
                 
             </div>
 
+            <div id="error-message6" class="error-message"></div> 
+
             <div class="comments">By entering phone number, you agree to receive calls or Text/SMS from Fast Life Insurance Services</div>
 
-            <div id="error-message6" class="error-message"></div> 
-            
             <div class="btn" onclick="validate9()">CONTINUE</div>
 
             <div class="progress-container">

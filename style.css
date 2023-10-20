@@ -143,6 +143,9 @@ input:hover {
     padding-bottom: 20px;
 }
 
+#month_container, #day_container, #year_container {
+    border-bottom: 1px solid #ccc;
+} 
 
 .fa-caret-down{
     color: #ccc;
