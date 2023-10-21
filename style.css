@@ -30,7 +30,7 @@
     width: 100vw;
     cursor: default;
     overflow-x: hidden;
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 /*Class Elements*/
