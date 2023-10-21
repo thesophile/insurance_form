@@ -164,7 +164,8 @@ input:hover {
     visibility:hidden;
     position:absolute;
     background-color: white;
-    height: 200px;
+    height:fit-content;
+    max-height: 200px;
     overflow:scroll;
     width:100%;
     z-index: 2;
