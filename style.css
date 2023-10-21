@@ -198,8 +198,12 @@ input:hover {
 
 .checkboxes{
     margin-bottom: 15px;
+    accent-color: green;
 }
 
+.green{
+    accent-color: green;
+}
 .comments{
     font-size: 12px;
     text-align: left;
@@ -265,7 +269,6 @@ input:hover {
 
 #question7 input[type="radio"]{
     display: block;
-    accent-color: green;
 }
 
 #question8 input{
