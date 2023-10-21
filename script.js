@@ -119,7 +119,7 @@ function next(){
     });
 
     //redirect to thank you page
-    //window.location.href = 'https://fastlifeins.com/thank-you' ;
+    window.location.href = 'https://fastlifeins.com/thank-you' ;
 
     }
 }
@@ -213,4 +213,44 @@ otherBox.addEventListener('change',function(){
   } else {
     otherDiv.style.display="none";
   }
+});
+
+
+
+// Get a reference to the phone number input field
+var phoneNumberInput = document.getElementById("number");
+
+// Set the initial cursor position
+var cursorPosition = 5; // Position inside the first bracket
+
+// Add a focus event listener to the input field
+phoneNumberInput.addEventListener("focus", function () {
+  phoneNumberInput.value = "+1 (   ) -";
+  phoneNumberInput.setSelectionRange(4,7);
+  // setCursorPosition(cursorPosition);
+});
+
+// Function to set the cursor position
+function setCursorPosition(position) {
+  phoneNumberInput.setSelectionRange(position, position);
+}
+
+// Add an input event listener to the input field
+phoneNumberInput.addEventListener("input", function () {
+  // Remove non-numeric characters
+  var input = phoneNumberInput.value.replace(/\D/g, '');
+
+  if (input.length <= 3) {
+    // User is entering the first three digits inside the first bracket
+    cursorPosition = 3 + input.length;
+  } else if (input.length <= 6) {
+    // User is entering the next three digits inside the second bracket
+    cursorPosition = 9 + input.length - 4;
+  } else {
+    // User is entering the last four digits after the hyphen
+    cursorPosition = 13 + input.length - 7;
+  }
+
+  // Set the cursor position
+  setCursorPosition(cursorPosition);
 });
