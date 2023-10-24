@@ -227,6 +227,7 @@ var cursorPosition = 5; // Position inside the first bracket
 phoneNumberInput.addEventListener("focus", function () {
   phoneNumberInput.value = "+1 (   ) -";
   phoneNumberInput.setSelectionRange(4,7);
+  // console.log(input.length);
   // setCursorPosition(cursorPosition);
 });
 
@@ -238,19 +239,25 @@ function setCursorPosition(position) {
 // Add an input event listener to the input field
 phoneNumberInput.addEventListener("input", function () {
   // Remove non-numeric characters
-  var input = phoneNumberInput.value.replace(/\D/g, '');
+  var raw_input = phoneNumberInput.value.replace(/\D/g, '');
+  var input = raw_input.slice(1);
 
-  if (input.length <= 3) {
+  if (input.length < 3) {
     // User is entering the first three digits inside the first bracket
-    cursorPosition = 3 + input.length;
-  } else if (input.length <= 6) {
+    cursorPosition = 4 + input.length;
+  } else if (input.length < 6) {
     // User is entering the next three digits after the bracket
-    cursorPosition = 9 + input.length - 4;
+    cursorPosition = 9 + input.length - 3;
   } else {
     // User is entering the last four digits after the hyphen
-    cursorPosition = 13 + input.length - 7;
+    cursorPosition = 13 + input.length - 6;
   }
+
+
 
   // Set the cursor position
   setCursorPosition(cursorPosition);
+
+  console.log(input.length);
+
 });

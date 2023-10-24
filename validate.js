@@ -126,10 +126,10 @@ function validate1(){
   }
   
   function validate9(){
-    var number = phoneNumberInput.value.replace(/\D/g, '');
+    var number = phoneNumberInput.value.replace(/\D/g, '').slice(1);
     const number_input = document.getElementById('number');
     
-    if(number.length !==11 || isNaN(number)){
+    if(number.length !==10 || isNaN(number)){
         document.getElementById("error-message6").textContent = "Please enter a valid US number";
         number_input.style.borderBottomColor="red";
       }
