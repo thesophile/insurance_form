@@ -244,7 +244,7 @@ phoneNumberInput.addEventListener("input", function () {
     // User is entering the first three digits inside the first bracket
     cursorPosition = 3 + input.length;
   } else if (input.length <= 6) {
-    // User is entering the next three digits inside the second bracket
+    // User is entering the next three digits after the bracket
     cursorPosition = 9 + input.length - 4;
   } else {
     // User is entering the last four digits after the hyphen
