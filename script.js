@@ -251,7 +251,7 @@ phoneNumberInput.addEventListener("input", function () {
 }
 
 if (input.length == 6) {
-  phoneNumberInput.value+= `+1 (${input.slice(0, 3)}) ${input.slice(4,7)}-`;
+  phoneNumberInput.value = `+1 (${input.slice(0, 3)}) ${input.slice(3,6)}-`;
 }
 
 
