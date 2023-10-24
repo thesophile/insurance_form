@@ -245,17 +245,13 @@ phoneNumberInput.addEventListener("input", function () {
   // Remove non-numeric characters
   var input = phoneNumberInput.value.replace(/\D/g, '').slice(1);
 
-  var first_brac = true;
-  var first_dash = true;
 
-  if (input.length == 3 && first_brac == true) {
-    phoneNumberInput.value+= ") ";
-    first_brac = false;
+  if (input.length == 3) {
+    phoneNumberInput.value = `+1 (${input.slice(0, 3)}) `;
 }
 
-if (input.length == 6 && first_dash == true) {
+if (input.length == 6) {
   phoneNumberInput.value+= "-";
-  first_dash = false;
 }
 
 
