@@ -247,10 +247,13 @@ phoneNumberInput.addEventListener("input", function () {
 
 
   if (input.length == 3) {
+    phoneNumberInput.value = "";
     phoneNumberInput.value = `+1 (${input.slice(0, 3)}) `;
+    console.log("3 entered");
 }
 
 if (input.length == 6) {
+  phoneNumberInput.value = "";
   phoneNumberInput.value = `+1 (${input.slice(0, 3)}) ${input.slice(3,6)}-`;
 }
 
