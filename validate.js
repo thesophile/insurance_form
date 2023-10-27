@@ -126,7 +126,9 @@ function validate1(){
   }
   
   function validate9(){
-    var number = phoneNumberInput.value.replace(/\D/g, '').slice(1);
+    // var number = phoneNumberInput.value.replace(/\D/g, '').slice(1);
+    var number = phoneNumberInput.value.replace(/\D/g, '');
+
     const number_input = document.getElementById('number');
     
     if(number.length !==10 || isNaN(number)){
