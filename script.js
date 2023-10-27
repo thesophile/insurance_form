@@ -220,21 +220,21 @@ otherBox.addEventListener('change',function(){
 // Get a reference to the phone number input field
 var phoneNumberInput = document.getElementById("number");
 
-// Set the initial cursor position
-var cursorPosition = 5; // Position inside the first bracket
+// // Set the initial cursor position
+// var cursorPosition = 5; // Position inside the first bracket
 
 // Add a focus event listener to the input field
-phoneNumberInput.addEventListener("focus", function () {
-  phoneNumberInput.value = "+1 (";
-  phoneNumberInput.setSelectionRange(4,7);
+// phoneNumberInput.addEventListener("focus", function () {
+  // phoneNumberInput.value = "+1 (";
+  // phoneNumberInput.setSelectionRange(4,7);
   // console.log(input.length);
   // setCursorPosition(cursorPosition);
-});
+// });
 
-// Function to set the cursor position
-function setCursorPosition(position) {
-  phoneNumberInput.setSelectionRange(position, position);
-}
+// // Function to set the cursor position
+// function setCursorPosition(position) {
+//   phoneNumberInput.setSelectionRange(position, position);
+// }
 
 
 
@@ -243,22 +243,25 @@ function setCursorPosition(position) {
 // Add an input event listener to the input field
 phoneNumberInput.addEventListener("input", function () {
   // Remove non-numeric characters
-  var input = phoneNumberInput.value.replace(/\D/g, '').slice(1);
+  // var input = phoneNumberInput.value.replace(/\D/g, '').slice(1);
+  var input = phoneNumberInput.value.replace(/\D/g, '');
+  
 
 
   if (input.length == 3) {
     phoneNumberInput.value = "";
-    phoneNumberInput.value = `+1 (${input.slice(0, 3)}) `;
-    console.log("3 entered");
+    // phoneNumberInput.value = `+1 (${input.slice(0, 3)}) `;
+    phoneNumberInput.value = `${input.slice(0, 3)}-`;
 }
 
 if (input.length == 6) {
   phoneNumberInput.value = "";
-  phoneNumberInput.value = `+1 (${input.slice(0, 3)}) ${input.slice(3,6)}-`;
+  // phoneNumberInput.value = `+1 (${input.slice(0, 3)}) ${input.slice(3,6)}-`;
+  phoneNumberInput.value = `${input.slice(0, 3)}-${input.slice(3,6)}-`;
+
 }
 
 
-  console.log(input.length);
 
 });
 
